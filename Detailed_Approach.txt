@@ -1,0 +1,63 @@
+Fraud Detection Analysis
+
+1. Data Cleaning
+
+The dataset underwent preprocessing, which included handling missing values, identifying and addressing outliers, and eliminating multi-collinearity. Variables such as nameOrig, nameDest, and isFlaggedFraud were dropped due to their irrelevance to fraud prediction. One-hot encoding was applied to categorical variables to ensure proper model interpretation.
+
+2. Fraud Detection Model
+
+The model selection involved multiple classifiers: Random Forest, XGBoost, AdaBoost, and CatBoost. These models were trained on the dataset to identify fraudulent transactions based on transaction patterns. Each model was evaluated for its effectiveness using standard performance metrics such as accuracy, precision, recall, F1-score, and confusion matrices.
+
+3. Variable Selection
+
+Feature selection was based on domain knowledge and statistical significance. Key features such as transaction type, amount, old and new balance values were retained. The feature importance scores from tree-based models were also analyzed to refine the selection.
+
+4. Model Performance
+
+The performance of each model was assessed using:
+
+Confusion matrices to visualize prediction errors.
+
+Precision-recall and accuracy scores to determine the best-performing model.
+
+F1-score to balance between false positives and false negatives.
+
+5. Key Predictors of Fraudulent Transactions
+
+Key predictors included:
+
+High transaction amounts
+
+Sudden large balance changes
+
+Specific transaction types such as TRANSFER and CASH_OUT
+
+Account balance inconsistencies before and after transactions
+
+6. Logical Validation of Predictors
+
+These predictors align with real-world fraud scenarios where fraudsters execute large, irregular transfers. The imbalances in account balances suggest money laundering or unauthorized access, reinforcing the credibility of these predictors.
+
+7. Infrastructure Prevention Measures
+
+Implement real-time anomaly detection using machine learning
+
+Strengthen authentication mechanisms like multi-factor authentication
+
+Establish automated alerts for suspicious transactions
+
+Monitor user behavior patterns for abnormal activities
+
+Ensure continuous model retraining with updated fraud patterns
+
+8. Evaluating Preventive Measures
+
+The success of fraud prevention strategies can be assessed through:
+
+Reduction in fraud incidents over time
+
+Improved model precision and recall in detecting fraud
+
+Decrease in false positives to avoid inconveniencing legitimate users
+
+Regular audits and simulations to test the system's robustness
